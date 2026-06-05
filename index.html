@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzeria Ramiro Suceava - Meniu Digital</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Pizzeria Ramiro Suceava - Meniu Digital Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary-color: #e63946;
-            --bg-dark: #121212;
-            --card-bg: #1e1e1e;
+            --primary-color: #ff4757;
+            --primary-hover: #e84118;
+            --bg-dark: #0f0f11;
+            --card-bg: #1a1a1e;
+            --card-expanded: #232329;
             --text-main: #ffffff;
             --text-muted: #a0a0a0;
-            --accent-gold: #d4af37;
+            --accent-gold: #ffa502;
+            --success-green: #2ed573;
         }
 
         * {
@@ -27,188 +30,257 @@
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
-            padding-bottom: 60px; /* Spațiu pentru bara de jos pe telefon */
+            padding-bottom: 40px;
+            overflow-x: hidden;
         }
 
-        /* Header Premium */
+        /* Header Premium modernizat */
         header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1000') no-repeat center center/cover;
-            padding: 40px 20px;
+            background: linear-gradient(rgba(15, 15, 17, 0.7), rgba(15, 15, 17, 0.95)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1000') no-repeat center center/cover;
+            padding: 50px 20px;
             text-align: center;
-            border-bottom: 3px solid var(--primary-color);
+            border-bottom: 2px solid rgba(255, 71, 87, 0.3);
         }
 
         header h1 {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 700;
             letter-spacing: 1px;
             color: var(--text-main);
             text-transform: uppercase;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
 
         header p {
             color: var(--accent-gold);
             font-size: 14px;
-            margin-top: 5px;
-            font-weight: 300;
+            margin-top: 8px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
         }
 
         .location-tag {
             display: inline-block;
-            background: rgba(230, 57, 70, 0.2);
+            background: rgba(255, 71, 87, 0.15);
             border: 1px solid var(--primary-color);
-            padding: 4px 12px;
+            padding: 6px 16px;
             border-radius: 20px;
-            font-size: 11px;
-            margin-top: 10px;
+            font-size: 12px;
+            margin-top: 15px;
             color: #ff6b6b;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.1);
         }
 
-        /* Bara de Navigare Rapidă (Fixă pe ecran pe telefon) */
+        /* Bara de Navigare cu efect de sticlă blurată */
         .nav-categories {
             position: sticky;
             top: 0;
-            background: rgba(18, 18, 18, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 12px 10px;
+            background: rgba(15, 15, 17, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 14px 10px;
             display: flex;
-            gap: 10px;
+            gap: 12px;
             overflow-x: auto;
             white-space: nowrap;
             z-index: 100;
-            border-bottom: 1px solid #2a2a2a;
-            scrollbar-width: none; /* Ascunde scrollbar pe Firefox */
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            scrollbar-width: none;
         }
 
         .nav-categories::-webkit-scrollbar {
-            display: none; /* Ascunde scrollbar pe Chrome/Safari */
+            display: none;
         }
 
         .nav-tab {
             background: var(--card-bg);
-            color: var(--text-main);
+            color: var(--text-muted);
             text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 20px;
+            padding: 10px 20px;
+            border-radius: 25px;
             font-size: 13px;
-            font-weight: 600;
-            border: 1px solid #333;
-            transition: all 0.3s;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s ease;
         }
 
-        .nav-tab:active {
+        .nav-tab.active, .nav-tab:active {
             background: var(--primary-color);
+            color: #fff;
             border-color: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
         }
 
         /* Container Conținut */
         .container {
-            padding: 20px 15px;
+            padding: 25px 15px;
             max-width: 600px;
             margin: 0 auto;
         }
 
-        /* Categorii Meniu */
+        /* Categorii */
         .category-section {
-            margin-bottom: 35px;
-            scroll-margin-top: 70px; /* Previne acoperirea titlului de către bara fixă */
+            margin-bottom: 40px;
+            scroll-margin-top: 80px;
         }
 
         .category-title {
-            font-size: 20px;
+            font-size: 22px;
+            font-weight: 600;
             color: var(--text-main);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 8px;
+            gap: 12px;
         }
 
         .category-title span {
-            color: var(--primary-color);
+            font-size: 24px;
         }
 
-        /* Preparate (Carduri) */
+        /* Card Preparat Expandabil (Acordeon) */
         .menu-item {
             background: var(--card-bg);
-            border-radius: 14px;
-            padding: 16px;
+            border-radius: 16px;
             margin-bottom: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.03);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        /* Zona vizibilă mereu */
+        .item-visible-header {
+            padding: 18px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            border-left: 4px solid transparent;
-            transition: transform 0.2s;
+            gap: 15px;
         }
 
-        .menu-item:active {
-            transform: scale(0.98);
-            border-left-color: var(--primary-color);
-        }
-
-        .item-details {
+        .item-info-short {
             flex: 1;
-            padding-right: 15px;
         }
 
         .item-name {
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 600;
             color: var(--text-main);
-            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .item-ingredients {
+        /* Indicator mic pentru detalii (săgeată) */
+        .item-name::after {
+            content: '▾';
             font-size: 12px;
             color: var(--text-muted);
-            line-height: 1.4;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item.expanded .item-name::after {
+            transform: rotate(180deg);
+            color: var(--primary-color);
         }
 
         .item-price {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             color: var(--accent-gold);
             white-space: nowrap;
-            background: rgba(212, 175, 55, 0.1);
-            padding: 6px 12px;
-            border-radius: 8px;
+            background: rgba(255, 165, 2, 0.1);
+            padding: 8px 14px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 165, 2, 0.15);
         }
 
-        /* Secțiune Info & Contact */
+        /* Zona ascunsă (Ingrediente & Detalii) */
+        .item-details-expanded {
+            max-height: 0;
+            overflow: hidden;
+            background: var(--card-expanded);
+            transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Când cardul are clasa .expanded */
+        .menu-item.expanded {
+            border-color: rgba(255, 71, 87, 0.3);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            background: var(--card-expanded);
+        }
+
+        .menu-item.expanded .item-details-expanded {
+            max-height: 200px; /* Destul spațiu pentru detalii */
+        }
+
+        .expanded-content-wrapper {
+            padding: 0 18px 18px 18px;
+            border-top: 1px solid rgba(255,255,255,0.04);
+            padding-top: 15px;
+        }
+
+        .ingredients-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .item-ingredients {
+            font-size: 13.5px;
+            color: #d1d1d6;
+            line-height: 1.5;
+        }
+
+        .item-meta-details {
+            margin-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Caseta Info Comenzi */
         .info-box {
-            background: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 14px;
-            padding: 20px;
+            background: linear-gradient(145deg, #16161a, #1f1f25);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 18px;
+            padding: 25px 20px;
             margin-top: 40px;
             text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .info-box h3 {
             color: var(--accent-gold);
-            margin-bottom: 10px;
-            font-size: 18px;
+            margin-bottom: 12px;
+            font-size: 19px;
+            font-weight: 600;
         }
 
         .info-box p {
-            font-size: 13px;
+            font-size: 13.5px;
             color: var(--text-muted);
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
-        /* Butoane de Acțiune Mobile (Sună / Navighează) */
+        /* Butoane Mobile */
         .action-buttons {
             display: flex;
-            gap: 10px;
-            margin-top: 15px;
+            gap: 12px;
+            margin-top: 20px;
         }
 
         .btn {
             flex: 1;
-            padding: 12px;
-            border-radius: 10px;
+            padding: 14px;
+            border-radius: 12px;
             text-decoration: none;
             font-size: 14px;
             font-weight: 600;
@@ -216,25 +288,33 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
         }
 
         .btn-call {
-            background: #2ecc71;
+            background: var(--success-green);
             color: white;
+            box-shadow: 0 4px 15px rgba(46, 213, 115, 0.2);
         }
 
         .btn-maps {
             background: #3498db;
             color: white;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
         }
 
         footer {
             text-align: center;
-            padding: 30px 15px;
-            font-size: 11px;
-            color: #555;
-            background: #0d0d0d;
-            margin-top: 40px;
+            padding: 40px 15px;
+            font-size: 12px;
+            color: #444;
+            background: #0a0a0c;
+            margin-top: 50px;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -246,9 +326,9 @@
         <span class="location-tag">📍 Suceava, România</span>
     </header>
 
-    <div class="nav-categories">
-        <a href="#pizza" class="nav-tab">🍕 Pizza</a>
-        <a href="#grill" class="nav-tab">🥩 Grill / Paste</a>
+    <div class="nav-categories" id="navCategories">
+        <a href="#pizza" class="nav-tab active">🍕 Pizza</a>
+        <a href="#grill" class="nav-tab">🥩 Grill & Specialități</a>
         <a href="#bauturi" class="nav-tab">🥤 Băuturi</a>
         <a href="#contact" class="nav-tab">📞 Contact</a>
     </div>
@@ -258,79 +338,149 @@
         <section class="category-section" id="pizza">
             <h2 class="category-title"><span>🍕</span> Pizza pe Vatră</h2>
 
-            <div class="menu-item">
-                <div class="item-details">
-                    <div class="item-name">Pizza Diavola</div>
-                    <div class="item-ingredients">Sos de roșii, mozzarella fină, salam picant italian, ulei picant.</div>
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-short">
+                        <div class="item-name">Pizza Diavola</div>
+                    </div>
+                    <div class="item-price">32 LEI</div>
                 </div>
-                <div class="item-price">32 LEI</div>
+                <div class="item-details-expanded">
+                    <div class="expanded-content-wrapper">
+                        <div class="ingredients-title">Ingrediente și compoziție:</div>
+                        <div class="item-ingredients">Sos de roșii, mozzarella fină, salam picant italian, ulei picant aromatizat pe vatră.</div>
+                        <div class="item-meta-details">
+                            <span>Gramaj: ~450g</span>
+                            <span style="color: var(--primary-color);">🔥 Produs Picant</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="menu-item">
-                <div class="item-details">
-                    <div class="item-name">Quattro Formaggi</div>
-                    <div class="item-ingredients">Mozzarella, gorgonzola, parmesan, brânză brie, smântână lichidă.</div>
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-short">
+                        <div class="item-name">Quattro Formaggi</div>
+                    </div>
+                    <div class="item-price">35 LEI</div>
                 </div>
-                <div class="item-price">35 LEI</div>
+                <div class="item-details-expanded">
+                    <div class="expanded-content-wrapper">
+                        <div class="ingredients-title">Ingrediente și compoziție:</div>
+                        <div class="item-ingredients">Blat premium, mozzarella, brânză gorgonzola nobilă, parmesan maturat, brânză brie cremoasă, smântână lichidă.</div>
+                        <div class="item-meta-details">
+                            <span>Gramaj: ~480g</span>
+                            <span style="color: var(--accent-gold);">⭐️ Recomandat</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="menu-item">
-                <div class="item-details">
-                    <div class="item-name">Pizza Ramiro (Specialitatea Casei)</div>
-                    <div class="item-ingredients">Sos roșii, mozzarella, șuncă press, ciuperci, porumb, măsline, bacon.</div>
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-short">
+                        <div class="item-name">Pizza Ramiro</div>
+                    </div>
+                    <div class="item-price">38 LEI</div>
                 </div>
-                <div class="item-price">38 LEI</div>
+                <div class="item-details-expanded">
+                    <div class="expanded-content-wrapper">
+                        <div class="ingredients-title">Ingrediente (Specialitatea Casei):</div>
+                        <div class="item-ingredients">Sos de roșii după rețetă proprie, mozzarella din belșug, șuncă praga premium, ciuperci proaspete, porumb dulce, măsline negre calitative, bacon crocant.</div>
+                        <div class="item-meta-details">
+                            <span>Gramaj: ~550g</span>
+                            <span style="color: var(--accent-gold);">👑 Cel mai vândut</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
 
         <section class="category-section" id="grill">
             <h2 class="category-title"><span>🥩</span> Grill & Specialități</h2>
 
-            <div class="menu-item">
-                <div class="item-details">
-                    <div class="item-name">Ceafă de porc la grătar</div>
-                    <div class="item-ingredients">Ceafă fragedă de porc, servită cu cartofi prăjiți aurii și sos de usturoi.</div>
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-short">
+                        <div class="item-name">Ceafă de porc la grătar</div>
+                    </div>
+                    <div class="item-price">28 LEI</div>
                 </div>
-                <div class="item-price">28 LEI</div>
+                <div class="item-details-expanded">
+                    <div class="expanded-content-wrapper">
+                        <div class="ingredients-title"> include garnitură:</div>
+                        <div class="item-ingredients">Ceafă fragedă de porc marinată, servită alături de cartofi prăjiți aurii și sos tradițional de usturoi făcut în casă.</div>
+                        <div class="item-meta-details">
+                            <span>Gramaj: 200g / 150g</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="menu-item">
-                <div class="item-details">
-                    <div class="item-name">Șnițel de Pui Crispy</div>
-                    <div class="item-ingredients">Piept de pui în fulgi de porumb, sosul pizzeriei inclus.</div>
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-short">
+                        <div class="item-name">Șnițel de Pui Crispy</div>
+                    </div>
+                    <div class="item-price">26 LEI</div>
                 </div>
-                <div class="item-price">26 LEI</div>
+                <div class="item-details-expanded">
+                    <div class="expanded-content-wrapper">
+                        <div class="ingredients-title">Detalii preparat:</div>
+                        <div class="item-ingredients">Piept de pui proaspăt, învelit în crustă crocantă de fulgi de porumb, prăjit ideal. Sosul special al pizzeriei inclus.</div>
+                        <div class="item-meta-details">
+                            <span>Gramaj: 250g</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
 
         <section class="category-section" id="bauturi">
             <h2 class="category-title"><span>🥤</span> Răcoritoare & Bere</h2>
 
-            <div class="menu-item">
-                <div class="item-details">
-                    <div class="item-name">Coca-Cola / Fanta / Sprite</div>
-                    <div class="item-ingredients">Doză 330ml / Sticlă 500ml</div>
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-short">
+                        <div class="item-name">Coca-Cola / Fanta / Sprite</div>
+                    </div>
+                    <div class="item-price">7 LEI</div>
                 </div>
-                <div class="item-price">7 LEI</div>
+                <div class="item-details-expanded">
+                    <div class="expanded-content-wrapper">
+                        <div class="ingredients-title">Opțiuni disponibile:</div>
+                        <div class="item-ingredients">Băutură răcoritoare carbogazoasă servită la alegere: Doză 330ml sau Sticlă 500ml (în funcție de stoc). Reci, de la frigider.</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="menu-item">
-                <div class="item-details">
-                    <div class="item-name">Apă Plată / Minerală</div>
-                    <div class="item-ingredients">Sticlă 500ml</div>
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-short">
+                        <div class="item-name">Apă Plată / Minerală</div>
+                    </div>
+                    <div class="item-price">6 LEI</div>
                 </div>
-                <div class="item-price">6 LEI</div>
+                <div class="item-details-expanded">
+                    <div class="expanded-content-wrapper">
+                        <div class="ingredients-title">Detalii:</div>
+                        <div class="item-ingredients">Apă plată sau minerală de calitate superioară la sticlă de 500ml.</div>
+                    </div>
+                </div>
             </div>
         </section>
 
+
         <section class="info-box" id="contact">
             <h3>📞 Comenzi & Rezervări</h3>
-            <p><strong>Program:</strong> Luni - Duminică: 10:00 - 23:00</p>
-            <p>📍 Str. Principală, Suceava (Lângă Centru)</p>
+            <p><strong>Program de lucru:</strong> Luni - Duminică: 10:00 - 23:00</p>
+            <p>📍 Str. Principală, Suceava (Lângă Zona Centrală)</p>
             
             <div class="action-buttons">
-                <a href="tel:0712345678" class="btn btn-call">📞 Sună Acum</a>
-                <a href="https://maps.google.com" target="_blank" class="btn btn-maps">📍 Deschide GPS</a>
+                <a href="tel:0712345678" class="btn btn-call">📞 Sună pentru Comandă</a>
+                <a href="https://maps.google.com" target="_blank" class="btn btn-maps">📍 Deschide în GPS</a>
             </div>
         </section>
 
@@ -338,8 +488,34 @@
 
     <footer>
         © 2026 Pizzeria Ramiro Suceava. Toate drepturile rezervate.<br>
-        Meniu Digital optimizat pentru Smartphone.
+        Meniu Digital Interactiv optimizat complet pentru ecrane tactile.
     </footer>
+
+    <script>
+        function toggleItem(element) {
+            // Dacă cel pe care am apăsat este deja deschis, îl închidem
+            if (element.classList.contains('expanded')) {
+                element.classList.remove('expanded');
+            } else {
+                // Opțional: Închide alte produse deschise automat pentru curățenie vizuală
+                document.querySelectorAll('.menu-item').forEach(item => {
+                    item.classList.remove('expanded');
+                });
+                
+                // Deschide produsul curent
+                element.classList.add('expanded');
+            }
+        }
+
+        // Schimbarea clasei active pe tab-uri la click
+        const tabs = document.querySelectorAll('.nav-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
