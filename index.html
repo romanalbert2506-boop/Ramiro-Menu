@@ -134,7 +134,7 @@
             display: block;
         }
 
-        /* Structură Card Stil Modern */
+        /* Card Meniu */
         .menu-item {
             background: var(--card-bg);
             border-radius: 10px;
@@ -192,7 +192,7 @@
             align-self: flex-start;
         }
 
-        /* Imaginea mică (Thumbnail) */
+        /* Zone Imagini */
         .item-img-container {
             width: 85px;
             height: 85px;
@@ -213,7 +213,7 @@
             transform: scale(1.1);
         }
 
-        /* Zona Extensibilă (Ingrediente + Foto Mare) */
+        /* Zona Extensibilă */
         .item-details-expanded {
             max-height: 0;
             overflow: hidden;
@@ -222,7 +222,7 @@
         }
 
         .menu-item.expanded .item-details-expanded {
-            max-height: 420px;
+            max-height: 450px;
         }
 
         .expanded-content-wrapper {
@@ -247,10 +247,9 @@
             margin-bottom: 12px;
         }
 
-        /* Imaginea mare din interior */
         .expanded-big-img {
             width: 100%;
-            height: 160px;
+            height: 170px;
             object-fit: cover;
             border-radius: 6px;
             margin-bottom: 12px;
@@ -397,7 +396,6 @@
                         <span class="item-price">18,50 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <!-- IMAGINE SPECIFICĂ CIORBĂ RĂDĂUȚEANĂ GALBENĂ CU SMÂNTÂNĂ -->
                         <img src="https://images.unsplash.com/photo-1594756202469-9ff9799d2e4e?q=80&w=300" alt="Ciorbă Rădăuțeană">
                     </div>
                 </div>
@@ -416,7 +414,6 @@
                         <span class="item-price">19,00 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <!-- IMAGINE SPECIFICĂ CIORBĂ DE BURTĂ TRADIȚIONALĂ -->
                         <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?q=80&w=300" alt="Ciorbă de Burtă">
                     </div>
                 </div>
@@ -430,12 +427,29 @@
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
                     <div class="item-info-left">
+                        <span class="item-name">Ciorbă de Văcuță</span>
+                        <span class="item-weight">400g</span>
+                        <span class="item-price">18,00 RON</span>
+                    </div>
+                    <div class="item-img-container">
+                        <img src="https://images.unsplash.com/photo-1547592165-e1d17fed6005?q=80&w=300" alt="Ciorbă de Văcuță">
+                    </div>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <img src="https://images.unsplash.com/photo-1547592165-e1d17fed6005?q=80&w=600" class="expanded-big-img" alt="Ciorbă Văcuță">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Pulpa de văcuță fragedă tăiată cubulețe, borș natural, cartofi, morcovi, țelină, mazăre, fasole verde, roșii decojite și leuștean proaspăt presărat deasupra.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left">
                         <span class="item-name">Cașcaval Pane + Cartofi</span>
                         <span class="item-weight">350g</span>
                         <span class="item-price">29,50 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <!-- IMAGINE SPECIFICĂ CAȘCAVAL PANE AURIE CU CARTOFI -->
                         <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?q=80&w=300" alt="Cașcaval Pane">
                     </div>
                 </div>
@@ -478,7 +492,6 @@
                         <span class="item-price">66,00 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <!-- IMAGINE SPECIFICĂ INELE DE CALAMAR CU RONDELĂ DE LĂMÂIE -->
                         <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=300" alt="Calamar Pane">
                     </div>
                 </div>
@@ -498,6 +511,25 @@
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
                     <div class="item-info-left">
+                        <span class="item-name">Pui la Ceaun cu Mămăliguță</span>
+                        <span class="item-weight">500g</span>
+                        <span class="item-price">39,00 RON</span>
+                    </div>
+                    <div class="item-img-container">
+                        <!-- MODIFICAT: ACUM ARATĂ UN PUI GĂTIT/RUPT, NU CRUD -->
+                        <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?q=80&w=300" alt="Pui la Ceaun">
+                    </div>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?q=80&w=600" class="expanded-big-img" alt="Pui Fript la Ceaun">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Jumătate de pui crescut la sol, rumenit tradițional la ceaun în ulei încins pentru o crustă perfectă aurie, servit fierbinte alături de mămăligă galbenă proaspătă și mujdei de usturoi intens.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left">
                         <span class="item-name">Aripioare Crispy cu Cartofi</span>
                         <span class="item-weight">400g</span>
                         <span class="item-price">34,00 RON</span>
@@ -510,6 +542,24 @@
                     <img src="https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=600" class="expanded-big-img" alt="Aripioare">
                     <div class="ingredients-title">Ingrediente & Detalii:</div>
                     <div class="item-ingredients">Aripioare de pui marinate generos într-un mix fin de mirodenii picante și dulci, date prin fulgi crocanți, cartofi prăjiți pai și celebrul sos cu maioneză și usturoi al casei.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left">
+                        <span class="item-name">Șnițel de Pui cu Cartofi</span>
+                        <span class="item-weight">400g</span>
+                        <span class="item-price">32,00 RON</span>
+                    </div>
+                    <div class="item-img-container">
+                        <img src="https://images.unsplash.com/photo-1594834749740-74b3f6764be4?q=80&w=300" alt="Șnițel de Pui">
+                    </div>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <img src="https://images.unsplash.com/photo-1594834749740-74b3f6764be4?q=80&w=600" class="expanded-big-img" alt="Șnițel de Pui">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Piept de pui fraged bătut fin, trecut prin făină, ou și pesmet crocant aurit în tigaie, servit cu cartofi pai proaspeți și o felie de lămâie.</div>
                 </div></div>
             </div>
 
@@ -534,19 +584,18 @@
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
                     <div class="item-info-left">
-                        <span class="item-name">Pui la Ceaun cu Mămăliguță</span>
-                        <span class="item-weight">500g</span>
-                        <span class="item-price">39,00 RON</span>
+                        <span class="item-name">Mici Tradiționali (4 buc)</span>
+                        <span class="item-weight">320g</span>
+                        <span class="item-price">26,00 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <!-- IMAGINE REALĂ DE PUI COPT / PRĂJIT CU MĂMĂLIGĂ -->
-                        <img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?q=80&w=300" alt="Pui la Ceaun">
+                        <img src="https://images.unsplash.com/photo-1619531558509-f38b1f5bb549?q=80&w=300" alt="Mici pe grătar">
                     </div>
                 </div>
                 <div class="item-details-expanded"><div class="expanded-content-wrapper">
-                    <img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?q=80&w=600" class="expanded-big-img" alt="Pui Ceaun">
+                    <img src="https://images.unsplash.com/photo-1619531558509-f38b1f5bb549?q=80&w=600" class="expanded-big-img" alt="Mici Grătar">
                     <div class="ingredients-title">Ingrediente & Detalii:</div>
-                    <div class="item-ingredients">Jumătate de pui crescut la sol, rumenit tradițional la ceaun în ulei încins pentru o crustă perfectă, servit fierbinte alături de mămăligă galbenă proaspătă și mujdei de usturoi intens.</div>
+                    <div class="item-ingredients">4 mici suculenți din amestec de carne de porc și vită cu condimente tradiționale, bicarbonat și usturoi, rumeniți pe grătarul încins. Se servesc cu muștar clasic și pâine proaspătă.</div>
                 </div></div>
             </div>
         </section>
@@ -578,7 +627,7 @@
         <!-- CATEGORIA: DESERT -->
         <section class="category-section" id="desert">
             <h2 class="category-title">Dolci</h2>
-            <span class="category-subtitle">Deserturi preparate chiar în bucătăria noastră</span>
+            <span class="category-subtitle">Deserturi preparate în bucătăria noastră</span>
 
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
@@ -588,14 +637,31 @@
                         <span class="item-price">24,00 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <!-- IMAGINE ADEVARATĂ DE PAPANAȘI ROMÂNEȘTI PLINI DE AFINE ȘI SMÂNTÂNĂ -->
-                        <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?q=80&w=300" alt="Papanași">
+                        <img src="https://images.unsplash.com/photo-1574085733277-851d9d856a3a?q=80&w=300" alt="Papanași">
                     </div>
                 </div>
                 <div class="item-details-expanded"><div class="expanded-content-wrapper">
-                    <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?q=80&w=600" class="expanded-big-img" alt="Papanași Românești">
+                    <img src="https://images.unsplash.com/photo-1574085733277-851d9d856a3a?q=80&w=600" class="expanded-big-img" alt="Papanași Românești">
                     <div class="ingredients-title">Ingrediente & Detalii:</div>
-                    <div class="item-ingredients">Gogoși pufoase din brânză dulce de vaci și griș, prăjite pe loc, înecate într-o smântână lichidă fină fermentată și completate cu dulceață dulce-acrișoară de afine negre sau vișine.</div>
+                    <div class="item-ingredients">Gogoși pufoase din brânză dulce de vaci și griș, prăjite pe loc, înecate într-o smântână lichidă consistentă și completate cu dulceață dulce-acrișoară de afine negre sau vișine.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left">
+                        <span class="item-name">Clătite cu Finetti sau Dulceață</span>
+                        <span class="item-weight">200g</span>
+                        <span class="item-price">14,00 RON</span>
+                    </div>
+                    <div class="item-img-container">
+                        <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=300" alt="Clătite dulci">
+                    </div>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=600" class="expanded-big-img" alt="Clătite fine">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Două clătite fine realizate din foaie clasică pufoasă (lapte, ouă, făină), umplute la alegere cu cremă fină de ciocolată Finetti sau dulceață aromată de casă.</div>
                 </div></div>
             </div>
         </section>
