@@ -59,19 +59,6 @@
             letter-spacing: 0.5px;
         }
 
-        .location-tag {
-            display: inline-block;
-            background: rgba(255, 71, 87, 0.15);
-            border: 1px solid var(--primary-color);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 12px;
-            margin-top: 15px;
-            color: #ff6b6b;
-            font-weight: 500;
-            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.1);
-        }
-
         /* Bara de Navigare Fixă */
         .nav-categories {
             position: sticky;
@@ -192,7 +179,7 @@
             border: 1px solid rgba(255, 165, 2, 0.15);
         }
 
-        /* Zona ascunsă (Ingrediente, Detalii & POZĂ) */
+        /* Zona ascunsă */
         .item-details-expanded {
             max-height: 0;
             overflow: hidden;
@@ -206,9 +193,8 @@
             background: var(--card-expanded);
         }
 
-        /* Am mărit max-height pentru a face loc și pozei */
         .menu-item.expanded .item-details-expanded {
-            max-height: 450px; 
+            max-height: 480px; 
         }
 
         .expanded-content-wrapper {
@@ -233,10 +219,10 @@
             margin-bottom: 12px;
         }
 
-        /* Stilul pentru poza din interiorul tab-ului */
+        /* Stilul pentru poza */
         .item-image {
             width: 100%;
-            height: 160px;
+            height: 170px;
             object-fit: cover;
             border-radius: 12px;
             margin-bottom: 12px;
@@ -251,67 +237,6 @@
             align-items: center;
             font-size: 12px;
             color: var(--text-muted);
-        }
-
-        /* Caseta Info Comenzi */
-        .info-box {
-            background: linear-gradient(145deg, #16161a, #1f1f25);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 18px;
-            padding: 25px 20px;
-            margin-top: 40px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .info-box h3 {
-            color: var(--accent-gold);
-            margin-bottom: 12px;
-            font-size: 19px;
-            font-weight: 600;
-        }
-
-        .info-box p {
-            font-size: 13.5px;
-            color: var(--text-muted);
-            margin-bottom: 10px;
-        }
-
-        /* Butoane Mobile */
-        .action-buttons {
-            display: flex;
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .btn {
-            flex: 1;
-            padding: 14px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: transform 0.2s, opacity 0.2s;
-        }
-
-        .btn:active {
-            transform: scale(0.97);
-        }
-
-        .btn-call {
-            background: var(--success-green);
-            color: white;
-            box-shadow: 0 4px 15px rgba(46, 213, 115, 0.2);
-        }
-
-        .btn-maps {
-            background: #3498db;
-            color: white;
-            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
         }
 
         footer {
@@ -330,15 +255,14 @@
     <header>
         <h1>Pizzeria Ramiro</h1>
         <p>🍕 Cuptor cu lemne • Tradiție Italiană 🍕</p>
-        <span class="location-tag">📍 Suceava, România</span>
     </header>
 
     <!-- Navigarea Rapidă -->
     <div class="nav-categories" id="navCategories">
-        <a href="#pizza" class="nav-tab active">🍕 Pizza</a>
+        <a href="#pizza" class="nav-tab active">🍕 Pizza pe Vatră</a>
         <a href="#grill" class="nav-tab">🥩 Grill & Specialități</a>
+        <a href="#garnituri" class="nav-tab">🍟 Garnituri & Sosuri</a>
         <a href="#bauturi" class="nav-tab">🥤 Băuturi</a>
-        <a href="#contact" class="nav-tab">📞 Contact</a>
     </div>
 
     <div class="container">
@@ -347,7 +271,28 @@
         <section class="category-section" id="pizza">
             <h2 class="category-title"><span>🍕</span> Pizza pe Vatră</h2>
 
-            <!-- Produs 1 -->
+            <!-- Pizza Margherita -->
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-short">
+                        <div class="item-name">Pizza Margherita</div>
+                    </div>
+                    <div class="item-price">26 LEI</div>
+                </div>
+                <div class="item-details-expanded">
+                    <div class="expanded-content-wrapper">
+                        <div class="ingredients-title">Ingrediente și compoziție:</div>
+                        <div class="item-ingredients">Sos de roșii, mozzarella fină, busuioc proaspăt și ulei de măsline aromat.</div>
+                        <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?q=80&w=600" alt="Pizza Margherita" class="item-image">
+                        <div class="item-meta-details">
+                            <span>Gramaj: ~400g</span>
+                            <span style="color: var(--accent-gold);">Clasic Italian</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pizza Diavola -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
                     <div class="item-info-short">
@@ -358,11 +303,8 @@
                 <div class="item-details-expanded">
                     <div class="expanded-content-wrapper">
                         <div class="ingredients-title">Ingrediente și compoziție:</div>
-                        <div class="item-ingredients">Sos de roșii, mozzarella fină, salam picant italian, ulei picant aromatizat pe vatră.</div>
-                        
-                        <!-- POZA PREPARAT -->
+                        <div class="item-ingredients">Sos de roșii, mozzarella fină, salam picant italian de calitate superioară, ulei picant.</div>
                         <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=600" alt="Pizza Diavola" class="item-image">
-                        
                         <div class="item-meta-details">
                             <span>Gramaj: ~450g</span>
                             <span style="color: var(--primary-color);">🔥 Produs Picant</span>
@@ -371,7 +313,27 @@
                 </div>
             </div>
 
-            <!-- Produs 2 -->
+            <!-- Pizza Capricciosa -->
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-short">
+                        <div class="item-name">Pizza Capricciosa</div>
+                    </div>
+                    <div class="item-price">34 LEI</div>
+                </div>
+                <div class="item-details-expanded">
+                    <div class="expanded-content-wrapper">
+                        <div class="ingredients-title">Ingrediente și compoziție:</div>
+                        <div class="item-ingredients">Sos de roșii, mozzarella, șuncă praga, ciuperci proaspete feliate, măsline negre, anghinare (opțional).</div>
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=600" alt="Pizza Capricciosa" class="item-image">
+                        <div class="item-meta-details">
+                            <span>Gramaj: ~500g</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pizza Quattro Formaggi -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
                     <div class="item-info-short">
@@ -383,10 +345,7 @@
                     <div class="expanded-content-wrapper">
                         <div class="ingredients-title">Ingrediente și compoziție:</div>
                         <div class="item-ingredients">Blat premium, mozzarella, brânză gorgonzola nobilă, parmesan maturat, brânză brie cremoasă, smântână lichidă.</div>
-                        
-                        <!-- POZA PREPARAT -->
                         <img src="https://images.unsplash.com/photo-1573821663912-569905455b1c?q=80&w=600" alt="Quattro Formaggi" class="item-image">
-                        
                         <div class="item-meta-details">
                             <span>Gramaj: ~480g</span>
                             <span style="color: var(--accent-gold);">⭐️ Recomandat</span>
@@ -395,7 +354,7 @@
                 </div>
             </div>
 
-            <!-- Produs 3 -->
+            <!-- Pizza Ramiro -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
                     <div class="item-info-short">
@@ -406,11 +365,8 @@
                 <div class="item-details-expanded">
                     <div class="expanded-content-wrapper">
                         <div class="ingredients-title">Ingrediente (Specialitatea Casei):</div>
-                        <div class="item-ingredients">Sos de roșii după rețetă proprie, mozzarella din belșug, șuncă praga premium, ciuperci proaspete, porumb dulce, măsline negre calitative, bacon crocant.</div>
-                        
-                        <!-- POZA PREPARAT -->
-                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600" alt="Pizza Ramiro" class="item-image">
-                        
+                        <div class="item-ingredients">Sos de roșii secret, mozzarella, șuncă press premium, ciuperci, porumb dulce, măsline negre întregi, bacon crocant rumenit la cuptor.</div>
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600" alt="Pizza Ramiro" class="item-image">
                         <div class="item-meta-details">
                             <span>Gramaj: ~550g</span>
                             <span style="color: var(--accent-gold);">👑 Cel mai vândut</span>
@@ -425,7 +381,7 @@
         <section class="category-section" id="grill">
             <h2 class="category-title"><span>🥩</span> Grill & Specialități</h2>
 
-            <!-- Produs 4 -->
+            <!-- Ceafa de porc -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
                     <div class="item-info-short">
@@ -436,11 +392,8 @@
                 <div class="item-details-expanded">
                     <div class="expanded-content-wrapper">
                         <div class="ingredients-title">Include garnitură:</div>
-                        <div class="item-ingredients">Ceafă fragedă de porc marinată, servită alături de cartofi prăjiți aurii și sos tradițional de usturoi făcut în casă.</div>
-                        
-                        <!-- POZA PREPARAT -->
+                        <div class="item-ingredients">Ceafă fragedă și suculentă de porc marinată la grătar, servită alături de cartofi prăjiți aurii și sos de usturoi.</div>
                         <img src="https://images.unsplash.com/photo-1603048588665-791ca8aea617?q=80&w=600" alt="Ceafa de porc" class="item-image">
-                        
                         <div class="item-meta-details">
                             <span>Gramaj: 200g / 150g</span>
                         </div>
@@ -448,7 +401,7 @@
                 </div>
             </div>
 
-            <!-- Produs 5 -->
+            <!-- Snitel Crispy -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
                     <div class="item-info-short">
@@ -459,13 +412,96 @@
                 <div class="item-details-expanded">
                     <div class="expanded-content-wrapper">
                         <div class="ingredients-title">Detalii preparat:</div>
-                        <div class="item-ingredients">Piept de pui proaspăt, învelit în crustă crocantă de fulgi de porumb, prăjit ideal. Sosul special al pizzeriei inclus.</div>
-                        
-                        <!-- POZA PREPARAT -->
+                        <div class="item-ingredients">Piept de pui proaspăt învelit într-o crustă super crocantă de fulgi de porumb. Sosul casei este inclus.</div>
                         <img src="https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=600" alt="Snitel Crispy" class="item-image">
-                        
                         <div class="item-meta-details">
                             <span>Gramaj: 250g</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Piept de pui la gratar -->
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-short">
+                        <div class="item-name">Piept de Pui la Grătar</div>
+                    </div>
+                    <div class="item-price">24 LEI</div>
+                </div>
+                <div class="item-details-expanded">
+                    <div class="expanded-content-wrapper">
+                        <div class="ingredients-title">Detalii preparat:</div>
+                        <div class="item-ingredients">Piept de pui fin, asezonat cu ierburi aromatice și pregătit la grătar pentru o textură suculentă.</div>
+                        <img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?q=80&w=600" alt="Piept pui gratar" class="item-image">
+                        <div class="item-meta-details">
+                            <span>Gramaj: 200g</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTIUNEA GARNITURI SI SOSURI -->
+        <section class="category-section" id="garnituri">
+            <h2 class="category-title"><span>🍟</span> Garnituri & Sosuri</h2>
+
+            <!-- Cartofi prajiti -->
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-short">
+                        <div class="item-name">Cartofi Prăjiți</div>
+                    </div>
+                    <div class="item-price">8 LEI</div>
+                </div>
+                <div class="item-details-expanded">
+                    <div class="expanded-content-wrapper">
+                        <div class="ingredients-title">Detalii:</div>
+                        <div class="item-ingredients">Cartofi tăiați, prăjiți până devin aurii și crocanți, ușor sărați.</div>
+                        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?q=80&w=600" alt="Cartofi prajiti" class="item-image">
+                        <div class="item-meta-details">
+                            <span>Gramaj: 150g</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sos de usturoi -->
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-short">
+                        <div class="item-name">Sos de Usturoi de Casă</div>
+                    </div>
+                    <div class="item-price">4 LEI</div>
+                </div>
+                <div class="item-details-expanded">
+                    <div class="expanded-content-wrapper">
+                        <div class="ingredients-title">Detalii:</div>
+                        <div class="item-ingredients">Sos cremos preparat zilnic din usturoi proaspăt, maioneză fină și mirodenii aromatice.</div>
+                        <img src="https://images.unsplash.com/photo-1571244856002-3f1248039d91?q=80&w=600" alt="Sos usturoi" class="item-image">
+                        <div class="item-meta-details">
+                            <span>Gramaj: 50g</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sos de rosii dulce/picant -->
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-short">
+                        <div class="item-name">Sos de Roșii (Dulce / Picant)</div>
+                    </div>
+                    <div class="item-price">4 LEI</div>
+                </div>
+                <div class="item-details-expanded">
+                    <div class="expanded-content-wrapper">
+                        <div class="ingredients-title">Detalii:</div>
+                        <div class="item-ingredients">Sos clasic din roșii decojite, cu ulei de măsline și oregano. Disponibil în variantă dulce sau picantă.</div>
+                        <img src="https://images.unsplash.com/photo-1607532941433-304659e8198a?q=80&w=600" alt="Sos rosii" class="item-image">
+                        <div class="item-meta-details">
+                            <span>Gramaj: 50g</span>
                         </div>
                     </div>
                 </div>
@@ -477,26 +513,27 @@
         <section class="category-section" id="bauturi">
             <h2 class="category-title"><span>🥤</span> Răcoritoare & Bere</h2>
 
-            <!-- Produs 6 -->
+            <!-- Coca-Cola -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
                     <div class="item-info-short">
-                        <div class="item-name">Coca-Cola / Fanta / Sprite</div>
+                        <div class="item-name">Gama Coca-Cola (Toate aromele)</div>
                     </div>
                     <div class="item-price">7 LEI</div>
                 </div>
                 <div class="item-details-expanded">
                     <div class="expanded-content-wrapper">
                         <div class="ingredients-title">Opțiuni disponibile:</div>
-                        <div class="item-ingredients">Băutură răcoritoare carbogazoasă servită la alegere: Doză 330ml sau Sticlă 500ml. Reci, proaspăt scoase de la frigider.</div>
-                        
-                        <!-- POZA PREPARAT -->
-                        <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=600" alt="Racoritoare" class="item-image">
+                        <div class="item-ingredients">Coca-Cola Original, Zero Zahăr, Fanta de portocale sau Sprite. Servite perfect reci.</div>
+                        <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=600" alt="Coca Cola" class="item-image">
+                        <div class="item-meta-details">
+                            <span>Doză 330ml / Sticlă 500ml</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Produs 7 -->
+            <!-- Apa -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
                     <div class="item-info-short">
@@ -507,25 +544,33 @@
                 <div class="item-details-expanded">
                     <div class="expanded-content-wrapper">
                         <div class="ingredients-title">Detalii:</div>
-                        <div class="item-ingredients">Apă plată sau minerală de calitate superioară la sticlă de 500ml.</div>
-                        
-                        <!-- POZA PREPARAT -->
+                        <div class="item-ingredients">Apă plată sau minerală de calitate superioară la sticlă.</div>
                         <img src="https://images.unsplash.com/photo-1608885898957-a599fb18de36?q=80&w=600" alt="Apa" class="item-image">
+                        <div class="item-meta-details">
+                            <span>Sticlă 500ml</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-
-        <!-- CONTACT -->
-        <section class="info-box" id="contact">
-            <h3>📞 Comenzi & Rezervări</h3>
-            <p><strong>Program de lucru:</strong> Luni - Duminică: 10:00 - 23:00</p>
-            <p>📍 Str. Principală, Suceava (Lângă Zona Centrală)</p>
-            
-            <div class="action-buttons">
-                <a href="tel:0712345678" class="btn btn-call">📞 Sună pentru Comandă</a>
-                <a href="https://maps.google.com" target="_blank" class="btn btn-maps">📍 Deschide în GPS</a>
+            <!-- Bere la sticla -->
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-short">
+                        <div class="item-name">Bere Premium (Ursus / Heineken)</div>
+                    </div>
+                    <div class="item-price">9 LEI</div>
+                </div>
+                <div class="item-details-expanded">
+                    <div class="expanded-content-wrapper">
+                        <div class="ingredients-title">Detalii:</div>
+                        <div class="item-ingredients">Bere blondă premium proaspătă, perfectă pentru a însoți o pizza caldă.</div>
+                        <img src="https://images.unsplash.com/photo-1568649929103-28ffbbebab1f?q=80&w=600" alt="Bere sticla" class="item-image">
+                        <div class="item-meta-details">
+                            <span>Sticlă 500ml</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -542,7 +587,7 @@
             if (element.classList.contains('expanded')) {
                 element.classList.remove('expanded');
             } else {
-                // Închide alte produse deschise automat
+                // Închide alte produse deschise automat pentru curățenie vizuală
                 document.querySelectorAll('.menu-item').forEach(item => {
                     item.classList.remove('expanded');
                 });
