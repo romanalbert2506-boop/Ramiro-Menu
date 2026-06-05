@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzeria Ramiro Suceava - Meniu Digital Premium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Am importat fontul elegant Playfair Display pentru acel vibe de Italia -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -45,9 +46,10 @@
         }
 
         header h1 {
-            font-size: 36px;
+            font-family: 'Playfair Display', serif; /* Fontul Italian */
+            font-size: 42px;
             font-weight: 700;
-            letter-spacing: -0.5px;
+            letter-spacing: 0.5px;
             color: var(--text-main);
             background: linear-gradient(to right, #ffffff, #f4f4f5);
             -webkit-background-clip: text;
@@ -56,11 +58,11 @@
 
         header p {
             color: var(--accent-gold);
-            font-size: 13px;
+            font-size: 12px;
             margin-top: 6px;
             font-weight: 500;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             opacity: 0.9;
         }
 
@@ -117,11 +119,12 @@
         }
 
         .category-title {
-            font-size: 20px;
-            font-weight: 600;
+            font-family: 'Playfair Display', serif; /* Fontul Italian */
+            font-size: 24px;
+            font-weight: 700;
             color: var(--text-main);
-            margin-bottom: 16px;
-            letter-spacing: -0.3px;
+            margin-bottom: 18px;
+            letter-spacing: 0.2px;
         }
 
         /* Noul Card de Produs Modernizat */
@@ -135,7 +138,7 @@
             transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Headerul cardului (Layout ca pe aplicațiile de livrare) */
+        /* Headerul cardului */
         .item-visible-header {
             padding: 16px;
             display: flex;
@@ -159,14 +162,16 @@
         }
 
         .item-name {
-            font-size: 16px;
+            font-family: 'Playfair Display', serif; /* Numele preparatelor devin elegante */
+            font-size: 19px;
             font-weight: 600;
             color: var(--text-main);
         }
 
         /* Badge-uri mici și drăguțe */
         .item-badge {
-            font-size: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 9px;
             font-weight: 600;
             padding: 2px 8px;
             border-radius: 10px;
@@ -234,8 +239,10 @@
         }
 
         .item-ingredients {
-            font-size: 13.5px;
-            color: #d4d4d8;
+            font-family: 'Playfair Display', serif; /* Descrierea ingredientelor devine ușor cursivă ca într-o trattoria */
+            font-style: italic;
+            font-size: 15px;
+            color: #e4e4e7;
             line-height: 1.5;
             margin-bottom: 16px;
         }
@@ -259,10 +266,12 @@
         }
 
         footer {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
             text-align: center;
             padding: 40px 15px;
-            font-size: 11px;
-            color: #52525b;
+            font-size: 13px;
+            color: #71717a;
             background: #000000;
             margin-top: 60px;
             letter-spacing: 0.2px;
