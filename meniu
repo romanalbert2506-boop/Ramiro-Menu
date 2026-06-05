@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramiro - Meniu Digital</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+header {
+    background: #1e1e1e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.container {
+    padding: 15px;
+}
+
+.category {
+    margin-top: 20px;
+}
+
+.category h2 {
+    border-left: 5px solid #e63946;
+    padding-left: 10px;
+}
+
+.item {
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.price {
+    color: green;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    color: gray;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Restaurant Ramiro</h1>
+    <p>Meniu digital QR</p>
+</header>
+
+<div class="container">
+
+    <div class="category">
+        <h2>🍕 Pizza</h2>
+
+        <div class="item">
+            <h3>Pizza Diavola</h3>
+            <p>sos roșii, mozzarella, salam picant</p>
+            <p class="price">32 lei</p>
+        </div>
+
+        <div class="item">
+            <h3>Quattro Formaggi</h3>
+            <p>4 tipuri de brânză</p>
+            <p class="price">35 lei</p>
+        </div>
+    </div>
+
+    <div class="category">
+        <h2>🥩 Grill</h2>
+
+        <div class="item">
+            <h3>Ceafă de porc</h3>
+            <p>cu cartofi prăjiți</p>
+            <p class="price">28 lei</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Ramiro Meniu Digital
+</footer>
+
+</body>
+</html>
