@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complex Nicolmit & Ramiro - Meniu Complet cu Imagini</title>
+    <title>Complex Nicolmit & Ramiro - Meniu Complet Interactiv</title>
     <!-- Fonturi Premium -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     
@@ -134,7 +134,7 @@
             display: block;
         }
 
-        /* Structură Card Stil Glovo/Bolt - Imaginea este mereu vizibilă la nivelul rândului */
+        /* Structură Card Stil Modern */
         .menu-item {
             background: var(--card-bg);
             border-radius: 10px;
@@ -192,7 +192,7 @@
             align-self: flex-start;
         }
 
-        /* Imaginea din Dreapta - Mereu Vizibilă */
+        /* Imaginea mică (Thumbnail) */
         .item-img-container {
             width: 85px;
             height: 85px;
@@ -213,16 +213,16 @@
             transform: scale(1.1);
         }
 
-        /* Zona care se deschide (Ingrediente + Foto Mare) */
+        /* Zona Extensibilă (Ingrediente + Foto Mare) */
         .item-details-expanded {
             max-height: 0;
             overflow: hidden;
             background: var(--card-expanded);
-            transition: max-height 0.3s ease-out;
+            transition: max-height 0.35s ease-out;
         }
 
         .menu-item.expanded .item-details-expanded {
-            max-height: 380px;
+            max-height: 420px;
         }
 
         .expanded-content-wrapper {
@@ -236,6 +236,7 @@
             text-transform: uppercase;
             color: var(--accent-gold);
             margin-bottom: 4px;
+            letter-spacing: 0.5px;
         }
 
         .item-ingredients {
@@ -246,23 +247,14 @@
             margin-bottom: 12px;
         }
 
-        /* Imaginea mare din interiorul zonei deschise */
+        /* Imaginea mare din interior */
         .expanded-big-img {
             width: 100%;
-            height: 150px;
+            height: 160px;
             object-fit: cover;
             border-radius: 6px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .nutrition-info {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
-            color: #888893;
-            background: rgba(0, 0, 0, 0.15);
-            padding: 6px 10px;
-            border-radius: 4px;
         }
 
         footer {
@@ -299,7 +291,7 @@
         <!-- CATEGORIA: PIZZA -->
         <section class="category-section" id="pizze">
             <h2 class="category-title">Le Pizze</h2>
-            <span class="category-subtitle">Coapte cu grijă pe vatră de piatră</span>
+            <span class="category-subtitle">Coapte pe vatră de piatră</span>
 
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
@@ -313,10 +305,9 @@
                     </div>
                 </div>
                 <div class="item-details-expanded"><div class="expanded-content-wrapper">
-                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600" class="expanded-big-img">
-                    <div class="ingredients-title">Ingrediente:</div>
-                    <div class="item-ingredients">Blat premium, sos roșii, mozzarella din belșug, șuncă praga, salam, kaizer, cabanos, ciuperci proaspete, ardei gras, măsline negre.</div>
-                    <div class="nutrition-info">Valori aprox: 3458 kcal | Perfectă pentru 3-4 persoane</div>
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600" class="expanded-big-img" alt="Pizza Grande">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Blat premium dospit lent, sos de roșii aromatizat, mozzarella din belșug, șuncă praga fină, salam, kaizer afumat, cabanos tradițional, ciuperci proaspete feliate, ardei gras, măsline negre.</div>
                 </div></div>
             </div>
 
@@ -332,9 +323,9 @@
                     </div>
                 </div>
                 <div class="item-details-expanded"><div class="expanded-content-wrapper">
-                    <img src="https://images.unsplash.com/photo-1573821663912-569905455b1c?q=80&w=600" class="expanded-big-img">
-                    <div class="ingredients-title">Ingrediente:</div>
-                    <div class="item-ingredients">Sos roșii de casă, mozzarella, parmezan ras, cașcaval afumat, gorgonzola cremoasă, fâșii din piept de pui la grătar.</div>
+                    <img src="https://images.unsplash.com/photo-1573821663912-569905455b1c?q=80&w=600" class="expanded-big-img" alt="Pizza Nicolmit">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Sos roșii secret, mozzarella, parmezan aromatizat, cașcaval afumat cremos, brânză gorgonzola și fâșii fragede din piept de pui gătit la grătar.</div>
                 </div></div>
             </div>
 
@@ -350,9 +341,9 @@
                     </div>
                 </div>
                 <div class="item-details-expanded"><div class="expanded-content-wrapper">
-                    <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=600" class="expanded-big-img">
-                    <div class="ingredients-title">Ingrediente:</div>
-                    <div class="item-ingredients">Sos clasic, mozzarella, șuncă, salam, kaizer afumat, cabanos tradițional, ciuperci feliate, ardei, măsline.</div>
+                    <img src="https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=600" class="expanded-big-img" alt="Pizza Ramiro">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Sos de roșii mediteranean, mozzarella topită, șuncă superioară, salam, kaizer, cabanos, ciuperci proaspete, ardei și măsline negre.</div>
                 </div></div>
             </div>
 
@@ -368,9 +359,9 @@
                     </div>
                 </div>
                 <div class="item-details-expanded"><div class="expanded-content-wrapper">
-                    <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=600" class="expanded-big-img">
-                    <div class="ingredients-title">Ingrediente:</div>
-                    <div class="item-ingredients">Sos aromat de roșii, mozzarella fină, salam picant Ventricina, ardei iute murat.</div>
+                    <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=600" class="expanded-big-img" alt="Pizza Diavola">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Aluat proaspăt pe vatră, sos roșii, mozzarella, salam Ventricina picant și ardei iute feliat pentru un gust intens.</div>
                 </div></div>
             </div>
 
@@ -386,8 +377,9 @@
                     </div>
                 </div>
                 <div class="item-details-expanded"><div class="expanded-content-wrapper">
-                    <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?q=80&w=600" class="expanded-big-img">
-                    <div class="item-ingredients">Mozzarella fină, parmezan maturat, brânză cu mucegai gorgonzola, cașcaval afumat din belșug.</div>
+                    <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?q=80&w=600" class="expanded-big-img" alt="Pizza Formaggi">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Combinație fină de brânzeturi italienești și autohtone: Mozzarella, Parmezan maturat, Gorgonzola intensă și Cașcaval afumat.</div>
                 </div></div>
             </div>
         </section>
@@ -395,7 +387,7 @@
         <!-- CATEGORIA: CIORBE & APERITIVE -->
         <section class="category-section" id="ciorbe">
             <h2 class="category-title">Zuppe & Antipasti</h2>
-            <span class="category-subtitle">Ciorbe calde moldovenești și gustări rapide</span>
+            <span class="category-subtitle">Tradiție și gust gustos</span>
 
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
@@ -405,12 +397,13 @@
                         <span class="item-price">18,50 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <img src="https://images.unsplash.com/photo-1547592165-e1d17f1a0655?q=80&w=300" alt="Ciorba">
+                        <img src="https://images.unsplash.com/photo-1547592165-e1d17f1a0655?q=80&w=300" alt="Ciorbă Rădăuțeană">
                     </div>
                 </div>
                 <div class="item-details-expanded"><div class="expanded-content-wrapper">
-                    <img src="https://images.unsplash.com/photo-1547592165-e1d17f1a0655?q=80&w=600" class="expanded-big-img">
-                    <div class="item-ingredients">Piept de pui fraged, usturoi, smântână cu conținut ridicat de grăsime, gălbenuș de ou, oțet. Se servește fierbinte.</div>
+                    <img src="https://images.unsplash.com/photo-1547592165-e1d17f1a0655?q=80&w=600" class="expanded-big-img" alt="Rădăuțeană">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Piept de pui fiert și mărunțit, stoc concentrat de pui, smântână grasă, usturoi pisat, gălbenuș de ou proaspăt și oțet pentru acreală tradițională.</div>
                 </div></div>
             </div>
 
@@ -422,9 +415,14 @@
                         <span class="item-price">19,00 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?q=80&w=300" alt="Ciorba de burta">
+                        <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?q=80&w=300" alt="Ciorbă de Burtă">
                     </div>
                 </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?q=80&w=600" class="expanded-big-img" alt="Burtă">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Fâșii din burtă de vită atent selecționată, dresă cu smântână din belșug, ou, gogoșari murați la oțet, usturoi și gătire lentă.</div>
+                </div></div>
             </div>
 
             <div class="menu-item" onclick="toggleItem(this)">
@@ -435,16 +433,21 @@
                         <span class="item-price">29,50 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <img src="https://images.unsplash.com/photo-1632483321443-4f90bf4fa6bc?q=80&w=300" alt="Cascaval pane">
+                        <img src="https://images.unsplash.com/photo-1632483321443-4f90bf4fa6bc?q=80&w=300" alt="Cașcaval Pane">
                     </div>
                 </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <img src="https://images.unsplash.com/photo-1632483321443-4f90bf4fa6bc?q=80&w=600" class="expanded-big-img" alt="Cașcaval">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Felii groase de cașcaval trecute prin ou și pesmet crocant, prăjite auriu. Servit alături de o porție generoasă de cartofi pai fierbinți.</div>
+                </div></div>
             </div>
         </section>
 
         <!-- CATEGORIA: PASTE & PESTE -->
         <section class="category-section" id="paste">
             <h2 class="category-title">Primo & Mare</h2>
-            <span class="category-subtitle">Paste rafinate și specialități din mare</span>
+            <span class="category-subtitle">Din bucătăria italiană și adâncurile apelor</span>
 
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
@@ -454,12 +457,13 @@
                         <span class="item-price">59,00 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=300" alt="Paste cu creveti">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=300" alt="Paste cu creveți">
                     </div>
                 </div>
                 <div class="item-details-expanded"><div class="expanded-content-wrapper">
-                    <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=600" class="expanded-big-img">
-                    <div class="item-ingredients">Paste fierte optim al dente, creveți suculenți decorticați, ulei de măsline extravirgin, usturoi, roșii cherry și vin alb.</div>
+                    <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=600" class="expanded-big-img" alt="Paste creveți">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Paste calitative, creveți proaspeți trași în tigaie cu unt, usturoi aromat, roșii cherry, stins cu vin alb și desăvârșit cu pătrunjel verde.</div>
                 </div></div>
             </div>
 
@@ -471,16 +475,21 @@
                         <span class="item-price">66,00 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=300" alt="Calamar">
+                        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=300" alt="Calamar Pane">
                     </div>
                 </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=600" class="expanded-big-img" alt="Calamar">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Inele fragede de calamar în crustă pane crocantă, rumenite uniform, asortate excelent cu cartofi tăiați rondele și sos de lămâie.</div>
+                </div></div>
             </div>
         </section>
 
         <!-- CATEGORIA: GRILL -->
         <section class="category-section" id="grill">
             <h2 class="category-title">Grill & Secondi</h2>
-            <span class="category-subtitle">Fripturi din pui și porc gătite perfect</span>
+            <span class="category-subtitle">Preparate calde din carne</span>
 
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
@@ -490,12 +499,13 @@
                         <span class="item-price">34,00 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <img src="https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=300" alt="Aripioare">
+                        <img src="https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=300" alt="Aripioare Crispy">
                     </div>
                 </div>
                 <div class="item-details-expanded"><div class="expanded-content-wrapper">
-                    <img src="https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=600" class="expanded-big-img">
-                    <div class="item-ingredients">Aripioare de pui în crustă super crocantă, cartofi prăjiți pai, serviți cu sosul usturoiat fin al casei Ramiro.</div>
+                    <img src="https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=600" class="expanded-big-img" alt="Aripioare">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Aripioare de pui marinate într-un mix secret de condimente, învelite într-o crustă extra-crispy, cartofi prăjiți pai și un sos cremos.</div>
                 </div></div>
             </div>
 
@@ -507,12 +517,13 @@
                         <span class="item-price">57,00 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=300" alt="Coaste porc">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=300" alt="Coaste de Porc">
                     </div>
                 </div>
                 <div class="item-details-expanded"><div class="expanded-content-wrapper">
-                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600" class="expanded-big-img">
-                    <div class="item-ingredients">Coaste de porc fragede rumenite la foc mic, glasate generos cu sos BBQ aromat, garnitură de cartofi rondele.</div>
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600" class="expanded-big-img" alt="Coaste">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Coaste de porc cărnoase marinate la cuptor, glazurate generos cu sos barbecue caramelizat, servite fierbinți alături de cartofi rotunzi rumeniți.</div>
                 </div></div>
             </div>
 
@@ -524,16 +535,21 @@
                         <span class="item-price">39,00 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <img src="https://images.unsplash.com/photo-1606728035253-49e190477c84?q=80&w=300" alt="Pui la ceaun">
+                        <img src="https://images.unsplash.com/photo-1606728035253-49e190477c84?q=80&w=300" alt="Pui la Ceaun">
                     </div>
                 </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <img src="https://images.unsplash.com/photo-1606728035253-49e190477c84?q=80&w=600" class="expanded-big-img" alt="Pui Ceaun">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Jumătăți de pui fraged prăjite în baie de ulei la ceaun până prind o crustă crocantă, servite cu mămăligă caldă din mălai tradițional și usturoi din belșug.</div>
+                </div></div>
             </div>
         </section>
 
         <!-- CATEGORIA: SALATE -->
         <section class="category-section" id="salate">
             <h2 class="category-title">Insalate</h2>
-            <span class="category-subtitle">Proaspete, sănătoase și hrănitoare</span>
+            <span class="category-subtitle">Proaspete și revigorante</span>
 
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
@@ -543,12 +559,13 @@
                         <span class="item-price">29,00 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=300" alt="Salata Caesar">
+                        <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=300" alt="Salată Caesar">
                     </div>
                 </div>
                 <div class="item-details-expanded"><div class="expanded-content-wrapper">
-                    <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=600" class="expanded-big-img">
-                    <div class="item-ingredients">Fâșii de pui pe grătar, mix crocant de salată verde, crutoane făcute în casă, fulgi de parmezan și faimosul dressing Caesar.</div>
+                    <img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=600" class="expanded-big-img" alt="Salata Caesar Mare">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Fâșii din piept de pui fript la grătar, frunze proaspete de salată iceberg, crutoane crocante cu ierburi aromatice, fulgi fini de parmezan și dressing Caesar cremos cu anșoa.</div>
                 </div></div>
             </div>
         </section>
@@ -556,7 +573,7 @@
         <!-- CATEGORIA: DESERT -->
         <section class="category-section" id="desert">
             <h2 class="category-title">Dolci</h2>
-            <span class="category-subtitle">Deserturi tradiționale făcute în casă</span>
+            <span class="category-subtitle">Ceva dulce pentru final</span>
 
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
@@ -566,20 +583,21 @@
                         <span class="item-price">24,00 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=300" alt="Papanasi">
+                        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=300" alt="Papanași">
                     </div>
                 </div>
                 <div class="item-details-expanded"><div class="expanded-content-wrapper">
-                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=600" class="expanded-big-img">
-                    <div class="item-ingredients">Papanași pufoși din brânză dulce de vaci, acoperiți cu smântână fermentată și dulceață aromată de afine sau vișine.</div>
+                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=600" class="expanded-big-img" alt="Papanași Dolci">
+                    <div class="ingredients-title">Ingrediente & Detalii:</div>
+                    <div class="item-ingredients">Aluat pufos cu brânză de vaci, modelat manual și prăjit pe loc. Se acoperă cu o cantitate generoasă de smântână proaspătă și dulceață artizanală aromată de afine de pădure.</div>
                 </div></div>
             </div>
         </section>
 
-        <!-- CATEGORIA NOUĂ: BĂUTURI -->
+        <!-- CATEGORIA: BĂUTURI -->
         <section class="category-section" id="bauturi">
             <h2 class="category-title">Bevande</h2>
-            <span class="category-subtitle">Răcoritoare reci și beri pentru masă</span>
+            <span class="category-subtitle">Răcoritoare reci, bere și cafea aromată</span>
 
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
@@ -589,9 +607,14 @@
                         <span class="item-price">8,00 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=300" alt="Suc">
+                        <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=300" alt="Suc Coca Cola">
                     </div>
                 </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=600" class="expanded-big-img" alt="Băuturi răcoritoare">
+                    <div class="ingredients-title">Detalii produs:</div>
+                    <div class="item-ingredients">Băutură răcoritoare carbogazoasă la sticlă PET individuală, servită de la gheață. Opțiuni disponibile: Coca-Cola Clasat/Zero, Fanta de portocale, Sprite.</div>
+                </div></div>
             </div>
 
             <div class="menu-item" onclick="toggleItem(this)">
@@ -602,22 +625,32 @@
                         <span class="item-price">6,50 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <img src="https://images.unsplash.com/photo-1608885898957-a599fb1698d6?q=80&w=300" alt="Apa">
+                        <img src="https://images.unsplash.com/photo-1608885898957-a599fb1698d6?q=80&w=300" alt="Apă Minerală">
                     </div>
                 </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <img src="https://images.unsplash.com/photo-1608885898957-a599fb1698d6?q=80&w=600" class="expanded-big-img" alt="Apă Dorna">
+                    <div class="ingredients-title">Detalii produs:</div>
+                    <div class="item-ingredients">Apă minerală naturală plată sau carbogazoasă (izvorul Dorna), perfectă pentru hidratare în timpul mesei. Servită rece.</div>
+                </div></div>
             </div>
 
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
                     <div class="item-info-left">
                         <span class="item-name">Bere Ursus Premium / Heineken</span>
-                        <span class="item-weight">500ml (Sticlă)</span>
+                        <span class="item-weight">500ml</span>
                         <span class="item-price">9,50 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?q=80&w=300" alt="Bere">
+                        <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?q=80&w=300" alt="Bere Ursus Heineken">
                     </div>
                 </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?q=80&w=600" class="expanded-big-img" alt="Beri Reci">
+                    <div class="ingredients-title">Detalii produs:</div>
+                    <div class="item-ingredients">Bere blondă premium, alcoolizată, servită la sticlă rece de 0.5L. Gust echilibrat și spumă densă ideală lângă un grill sau o pizza caldă.</div>
+                </div></div>
             </div>
 
             <div class="menu-item" onclick="toggleItem(this)">
@@ -628,9 +661,14 @@
                         <span class="item-price">7,50 RON</span>
                     </div>
                     <div class="item-img-container">
-                        <img src="https://images.unsplash.com/photo-1510972527409-cef1903972fa?q=80&w=300" alt="Espresso">
+                        <img src="https://images.unsplash.com/photo-1510972527409-cef1903972fa?q=80&w=300" alt="Cafea Espresso">
                     </div>
                 </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <img src="https://images.unsplash.com/photo-1510972527409-cef1903972fa?q=80&w=600" class="expanded-big-img" alt="Espresso Cald">
+                    <div class="ingredients-title">Detalii produs:</div>
+                    <div class="item-ingredients">Shot de cafea obținut din boabe premium măcinate proaspăt, cu o cremă bogată de alună și aromă intensă de ciocolată amăruie. Se poate servi cu/fără zahăr și lapte.</div>
+                </div></div>
             </div>
         </section>
 
