@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complex Nicolmit & Ramiro - Meniu Premium 2026</title>
-    <!-- Fonturi Premium de inspirație Italiană: Cormorant Garamond (Serif de lux) și Montserrat (pentru lizibilitate prețuri) -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Gamond:ital,wght@0,400;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Complex Nicolmit & Ramiro - Meniu Complet Premium</title>
+    <!-- Fonturi Premium Italiene -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary-italian: #8b263e; /* Un roșu elegant toscan / grena premium */
+            --primary-italian: #8b263e;
             --bg-dark: #0a0a0c;
             --card-bg: #131317;
             --card-expanded: #1a1a22;
             --text-main: #f4f4f5;
             --text-muted: #a1a1aa;
-            --accent-gold: #dfb26c; /* Aur antic italian */
+            --accent-gold: #dfb26c;
         }
 
         * {
@@ -29,25 +29,23 @@
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
-            padding-bottom: 50px;
+            padding-bottom: 60px;
             overflow-x: hidden;
             font-size: 18px;
         }
 
-        /* Header Premium Ristorante */
         header {
-            background: linear-gradient(to bottom, rgba(10, 10, 12, 0.5), var(--bg-dark)), url('https://images.unsplash.com/photo-1541014741259-df549fa9bc87?q=80&w=1200') no-repeat center center/cover;
-            padding: 80px 20px 40px 20px;
+            background: linear-gradient(to bottom, rgba(10, 10, 12, 0.6), var(--bg-dark)), url('https://images.unsplash.com/photo-1541014741259-df549fa9bc87?q=80&w=1200') no-repeat center center/cover;
+            padding: 70px 20px 35px 20px;
             text-align: center;
             border-bottom: 1px solid rgba(223, 178, 108, 0.15);
         }
 
         header h1 {
-            font-size: 46px;
+            font-size: 42px;
             font-weight: 700;
             letter-spacing: 1px;
             color: var(--text-main);
-            line-height: 1.1;
         }
 
         header .subtitle {
@@ -55,33 +53,31 @@
             color: var(--accent-gold);
             font-style: italic;
             margin-top: 5px;
-            letter-spacing: 2px;
         }
 
         header .promo-badge {
             display: inline-block;
             font-family: 'Montserrat', sans-serif;
             font-size: 11px;
-            background: rgba(139, 38, 62, 0.3);
+            background: rgba(139, 38, 62, 0.25);
             border: 1px solid var(--primary-italian);
             color: #ff8a9e;
             padding: 4px 12px;
             border-radius: 4px;
-            margin-top: 15px;
-            letter-spacing: 1px;
+            margin-top: 12px;
             text-transform: uppercase;
         }
 
-        /* Navigație tip Trattoria */
+        /* Navigație Orizontală Rapidă */
         .nav-categories {
             position: sticky;
             top: 0;
             background: rgba(10, 10, 12, 0.9);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
-            padding: 14px 10px;
+            padding: 12px 8px;
             display: flex;
-            gap: 8px;
+            gap: 6px;
             overflow-x: auto;
             z-index: 100;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -97,14 +93,13 @@
             background: transparent;
             color: var(--text-muted);
             text-decoration: none;
-            padding: 6px 14px;
+            padding: 6px 12px;
             border-radius: 4px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.3s ease;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.06);
         }
 
         .nav-tab.active {
@@ -113,62 +108,59 @@
             border-color: var(--accent-gold);
         }
 
-        /* Container central */
         .container {
-            padding: 25px 16px;
+            padding: 20px 14px;
             max-width: 650px;
             margin: 0 auto;
         }
 
         .category-section {
-            margin-bottom: 40px;
-            scroll-margin-top: 70px;
+            margin-bottom: 35px;
+            scroll-margin-top: 65px;
         }
 
         .category-title {
-            font-size: 32px;
+            font-size: 30px;
             font-weight: 700;
             color: var(--accent-gold);
-            margin-bottom: 4px;
-            letter-spacing: 0.5px;
+            margin-bottom: 2px;
         }
         
         .category-subtitle {
-            font-size: 16px;
+            font-size: 15px;
             color: var(--text-muted);
             font-style: italic;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             display: block;
         }
 
-        /* Cardul de Preparat */
         .menu-item {
             background: var(--card-bg);
-            border-radius: 12px;
-            margin-bottom: 14px;
+            border-radius: 10px;
+            margin-bottom: 12px;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: 1px solid rgba(255, 255, 255, 0.02);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .item-visible-header {
-            padding: 18px 16px;
+            padding: 16px 14px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 16px;
+            gap: 12px;
+            cursor: pointer;
         }
 
         .item-info-left {
             flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 3px;
         }
 
         .item-name {
-            font-size: 23px;
+            font-size: 21px;
             font-weight: 600;
             color: var(--text-main);
             line-height: 1.2;
@@ -178,32 +170,25 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 12px;
             color: var(--text-muted);
-            font-weight: 300;
         }
 
         .item-price {
             font-family: 'Montserrat', sans-serif;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 600;
             color: var(--accent-gold);
             white-space: nowrap;
-            background: rgba(223, 178, 108, 0.07);
+            background: rgba(223, 178, 108, 0.06);
             padding: 4px 10px;
-            border-radius: 6px;
-            border: 1px solid rgba(223, 178, 108, 0.15);
+            border-radius: 4px;
+            border: 1px solid rgba(223, 178, 108, 0.12);
         }
 
-        /* Zona Extinsă (Detalii și Nutriție) */
         .item-details-expanded {
             max-height: 0;
             overflow: hidden;
             background: var(--card-expanded);
-            transition: max-height 0.4s ease-out;
-        }
-
-        .menu-item.expanded {
-            background: var(--card-expanded);
-            border-color: rgba(223, 178, 108, 0.25);
+            transition: max-height 0.3s ease-out;
         }
 
         .menu-item.expanded .item-details-expanded {
@@ -211,458 +196,594 @@
         }
 
         .expanded-content-wrapper {
-            padding: 16px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
         }
 
         .ingredients-title {
             font-family: 'Montserrat', sans-serif;
             font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 1px;
             color: var(--accent-gold);
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .item-ingredients {
             font-style: italic;
-            font-size: 18px;
+            font-size: 17px;
             color: #e4e4e7;
             line-height: 1.4;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .nutrition-info {
             font-family: 'Montserrat', sans-serif;
             font-size: 11px;
             color: #888893;
-            line-height: 1.4;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 8px 12px;
-            border-radius: 6px;
-            border: 1px solid rgba(255, 255, 255, 0.02);
+            background: rgba(0, 0, 0, 0.15);
+            padding: 6px 10px;
+            border-radius: 4px;
         }
 
         footer {
             text-align: center;
-            padding: 50px 20px;
+            padding: 40px 20px;
             font-size: 15px;
             color: #52525b;
             background: #050507;
-            margin-top: 80px;
+            margin-top: 60px;
             border-top: 1px solid rgba(223, 178, 108, 0.1);
-            letter-spacing: 0.5px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Complex Nicolmit</h1>
-        <div class="subtitle">Ristorante Ramiro • Cucina Italiana & Grill</div>
-        <div class="promo-badge">Ofertă specială: La 3 Pizza comandate primiți 1 Gratis!</div>
+        <h1>Complex Nicolmit & Ramiro</h1>
+        <div class="subtitle">Meniu Complet • Tradiție și Rafinament Italian</div>
+        <div class="promo-badge">Ofertă Pizza: La 3 Pizza comandate primiți 1 GRATIS!</div>
     </header>
 
-    <!-- Navigare Categorii -->
     <div class="nav-categories" id="navCategories">
-        <a href="#taverna" class="nav-tab active">🇮🇹 Taverna Siciliana</a>
-        <a href="#pizze" class="nav-tab">🍕 Le Pizze</a>
-        <a href="#grill" class="nav-tab">🥩 Grill & Main</a>
+        <a href="#pizze" class="nav-tab active">🍕 Pizza</a>
+        <a href="#paste" class="nav-tab">🇮🇹 Paste & Mare</a>
+        <a href="#grill" class="nav-tab">🥩 Grill & Pui</a>
+        <a href="#porc" class="nav-tab">🍖 Porc & Vită</a>
+        <a href="#garnituri" class="nav-tab">🍟 Garnituri & Sosuri</a>
+        <a href="#salate" class="nav-tab">🥗 Salate</a>
     </div>
 
     <div class="container">
 
-        <!-- SECTIUNEA 1: TAVERNA SICILIANA -->
-        <section class="category-section" id="taverna">
-            <h2 class="category-title">Taverna Siciliana</h2>
-            <span class="category-subtitle">Paste rafinate și specialități din mare</span>
-
-            <!-- Produs 1 -->
-            <div class="menu-item" onclick="toggleItem(this)">
-                <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Paste cu creveți</span>
-                        <span class="item-weight">400g</span>
-                    </div>
-                    <span class="item-price">59,00 RON</span>
-                </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Compoziție:</div>
-                        <div class="item-ingredients">Paste artizanale, creveți suculenți, ulei de măsline de calitate superioară, asezonate perfect cu sare și piper.</div>
-                        <div class="nutrition-info">Valori nutriționale: 637 kcal | Proteine: 42.09g | Lipide: 3.1g | Glucide: 66.14g</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Produs 2 -->
-            <div class="menu-item" onclick="toggleItem(this)">
-                <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Paste alla Scoglio</span>
-                        <span class="item-weight">400g</span>
-                    </div>
-                    <span class="item-price">68,00 RON</span>
-                </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Compoziție:</div>
-                        <div class="item-ingredients">Rețetă clasică din sudul Italiei cu fructe de mare proaspete trase la tigaie și sos aromat de roșii cu ierburi aromatice.</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Produs 3 -->
-            <div class="menu-item" onclick="toggleItem(this)">
-                <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Paste Aglio, Olio e Peperoncino</span>
-                        <span class="item-weight">200g</span>
-                    </div>
-                    <span class="item-price">27,00 RON</span>
-                </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Compoziție:</div>
-                        <div class="item-ingredients">Paste fine, ulei extravirgin de măsline, infuzie de vin alb, roșii cherry dulci și condimente picante.</div>
-                        <div class="nutrition-info">Valori nutriționale: 361 kcal | Proteine: 8g | Lipide: 1g | Glucide: 50.4g</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Produs 4 -->
-            <div class="menu-item" onclick="toggleItem(this)">
-                <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Risotto cu fructe de mare</span>
-                        <span class="item-weight">400g</span>
-                    </div>
-                    <span class="item-price">59,00 RON</span>
-                </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Compoziție:</div>
-                        <div class="item-ingredients">Orez cremos, calamar proaspăt, creveți delicioși, carne de scoici, ulei de măsline, sare și piper aromat.</div>
-                        <div class="nutrition-info">Valori nutriționale per suta de grame: 102 kcal | Proteine: 5g | Lipide: 3.4g | Glucide: 12.5g</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Produs 5 -->
-            <div class="menu-item" onclick="toggleItem(this)">
-                <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Fructe de mare pane</span>
-                        <span class="item-weight">350g</span>
-                    </div>
-                    <span class="item-price">75,00 RON</span>
-                </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Compoziție:</div>
-                        <div class="item-ingredients">Selecție rafinată de fructe de mare de import (scoici, creveți, calamar), ou, făină fină de semola, ulei și sare.</div>
-                        <div class="nutrition-info">Valori nutriționale: 245 kcal | Proteine: 9.3g | Lipide: 18.9g | Glucide: 10g</div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Produs 6 -->
-            <div class="menu-item" onclick="toggleItem(this)">
-                <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Calamar Pane cu cartofi rondele</span>
-                        <span class="item-weight">400g</span>
-                    </div>
-                    <span class="item-price">66,00 RON</span>
-                </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Compoziție:</div>
-                        <div class="item-ingredients">Inele de calamar fraged în crustă crocantă (făină, ou, condimente), servit alături de cartofi rondele rumeniți.</div>
-                        <div class="nutrition-info">Valori nutriționale: 613.8 kcal | Proteine: 19g | Lipide: 18.85g | Glucide: 87.75g</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- SECTIUNEA 2: LE PIZZE -->
+        <!-- CATEGORIA 1: PIZZA -->
         <section class="category-section" id="pizze">
             <h2 class="category-title">Le Pizze</h2>
-            <span class="category-subtitle">Pizza tradițională coaptă cu pasiune</span>
+            <span class="category-subtitle">Toate specialitățile noastre coapte pe vatră</span>
 
-            <!-- Pizza 1 -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Pizza Grande Ramiro</span>
-                        <span class="item-weight">1600g • Format XXL</span>
-                    </div>
+                    <div class="item-info-left"><span class="item-name">Pizza Grande Ramiro</span><span class="item-weight">1600g</span></div>
                     <span class="item-price">75,00 RON</span>
                 </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Ingrediente:</div>
-                        <div class="item-ingredients">Blat dospit, sos de roșii, mozzarella din belșug, șuncă presată, salam, kaizer, cabanos afumat, ciuperci, ardei și măsline.</div>
-                        <div class="nutrition-info">Energie totală: 3458 kcal | Glucide: 234.34g | Lipide: 191.2g | Proteine: 193.6g</div>
-                    </div>
-                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos roșii, mozzarella, șuncă, salam, kaizer, cabanos, ciuperci, ardei, măsline.</div>
+                    <div class="nutrition-info">Valori: 3458 kcal | P: 193.6g | L: 191.2g | G: 234.34g</div>
+                </div></div>
             </div>
 
-            <!-- Pizza 2 -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Pizza Nicolmit</span>
-                        <span class="item-weight">650g</span>
-                    </div>
+                    <div class="item-info-left"><span class="item-name">Pizza Nicolmit</span><span class="item-weight">650g</span></div>
                     <span class="item-price">42,00 RON</span>
                 </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Ingrediente:</div>
-                        <div class="item-ingredients">Blat pufos, sos de roșii, mozzarella, parmezan maturat, cașcaval fin, brânză nobilă gorgonzola și fâșii din piept de pui.</div>
-                        <div class="nutrition-info">Energie estimată: 3458 kcal | Proteine bogate din piept de pui</div>
-                    </div>
-                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos roșii, mozzarella, parmezan, cașcaval, gorgonzola, piept de pui.</div>
+                </div></div>
             </div>
 
-            <!-- Pizza 3 -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Pizza Ramiro</span>
-                        <span class="item-weight">850g • Specialitatea Casei</span>
-                    </div>
+                    <div class="item-info-left"><span class="item-name">Pizza Ramiro</span><span class="item-weight">850g</span></div>
                     <span class="item-price">42,00 RON</span>
                 </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Ingrediente:</div>
-                        <div class="item-ingredients">Blat clasic, sos, mozzarella topită, șuncă, salam aromatic, kaizer afumat, cabanos, ciuperci proaspete, ardei gras și măsline negre.</div>
-                    </div>
-                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos, mozzarella, șuncă, salam, kaizer, cabanos, ciuperci, ardei, măsline.</div>
+                </div></div>
             </div>
 
-            <!-- Pizza 4 -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Pizza Vulcanos</span>
-                        <span class="item-weight">850g</span>
-                    </div>
+                    <div class="item-info-left"><span class="item-name">Pizza Vulcanos</span><span class="item-weight">850g</span></div>
                     <span class="item-price">34,00 RON</span>
                 </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Ingrediente:</div>
-                        <div class="item-ingredients">Blat proaspăt, sos roșu aromat, straturi fine de mozzarella, ciuperci proaspete de cultură și șuncă de calitate superioară.</div>
-                        <div class="nutrition-info">Valori nutriționale: 887 kcal | Proteine: 62.2g | Lipide: 40.54g | Glucide: 57.4g</div>
-                    </div>
-                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos roșii, mozzarella, ciuperci, șuncă.</div>
+                    <div class="nutrition-info">Valori: 887 kcal | P: 62.2g | L: 40.54g</div>
+                </div></div>
             </div>
 
-            <!-- Pizza 5 -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Pizza Fantasia</span>
-                        <span class="item-weight">700g</span>
-                    </div>
+                    <div class="item-info-left"><span class="item-name">Pizza Fantasia</span><span class="item-weight">700g</span></div>
                     <span class="item-price">35,00 RON</span>
                 </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Ingrediente:</div>
-                        <div class="item-ingredients">Blat, sos delicios, mozzarella, ciuperci, fâșii din piept de pui la grătar, boabe de porumb dulce și buchețele de broccoli.</div>
-                        <div class="nutrition-info">Valori nutriționale: 1239.1 kcal | Proteine: 78.9g | Lipide: 25.9g | Glucide: 172.8g</div>
-                    </div>
-                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos, mozzarella, ciuperci, piept de pui, porumb, broccoli.</div>
+                </div></div>
             </div>
 
-            <!-- Pizza 6 -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Pizza Mediteraneană</span>
-                        <span class="item-weight">650g</span>
-                    </div>
+                    <div class="item-info-left"><span class="item-name">Pizza Mediteraneană</span><span class="item-weight">650g</span></div>
                     <span class="item-price">40,00 RON</span>
                 </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Ingrediente:</div>
-                        <div class="item-ingredients">Blat clasic, sos de roșii, mozzarella din abundență, mix de fructe de mare savuroase și felii proaspete de lămâie.</div>
-                        <div class="nutrition-info">Valori nutriționale: 1185 kcal | Proteine: 84.9g | Lipide: 48.8g | Glucide: 159.9g</div>
-                    </div>
-                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos, mozzarella, mix fructe de mare, lămâie.</div>
+                </div></div>
             </div>
 
-            <!-- Pizza 7 -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Pizza Milanese</span>
-                        <span class="item-weight">650g</span>
-                    </div>
+                    <div class="item-info-left"><span class="item-name">Pizza Milanese</span><span class="item-weight">650g</span></div>
                     <span class="item-price">39,00 RON</span>
                 </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Ingrediente:</div>
-                        <div class="item-ingredients">Blat, sos, mozzarella, brânză telemea ușor sărată, măsline, ceapă roșie și felii fine de prosciutto crudo autentic.</div>
-                        <div class="nutrition-info">Valori nutriționale: 1817 kcal | Proteine: 99.9g | Lipide: 59.5g | Glucide: 139.7g</div>
-                    </div>
-                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos, mozzarella, telemea, măsline, ceapă, prosciutto crudo.</div>
+                </div></div>
             </div>
 
-            <!-- Pizza 8 -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Pizza Quattro Formaggi</span>
-                        <span class="item-weight">650g</span>
-                    </div>
+                    <div class="item-info-left"><span class="item-name">Pizza Quattro Formaggi</span><span class="item-weight">650g</span></div>
                     <span class="item-price">39,00 RON</span>
                 </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Ingrediente:</div>
-                        <div class="item-ingredients">O simfonie cremoasă alcătuită din sos, mozzarella premium, parmezan aromat, brânză cu mucegai nobil gorgonzola și cașcaval afumat.</div>
-                        <div class="nutrition-info">Valori nutriționale: 1311 kcal | Proteine: 76.2g | Lipide: 50.91g | Glucide: 151.1g</div>
-                    </div>
-                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos, mozzarella, parmezan, gorgonzola, cașcaval afumat.</div>
+                </div></div>
             </div>
 
-            <!-- Pizza 9 -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Pizza Piept de pui</span>
-                        <span class="item-weight">750g</span>
-                    </div>
+                    <div class="item-info-left"><span class="item-name">Pizza Piept de Pui</span><span class="item-weight">750g</span></div>
                     <span class="item-price">38,50 RON</span>
                 </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Ingrediente:</div>
-                        <div class="item-ingredients">Blat subțire, sos, mozzarella, piept de pui mărunțit, porumb crocant și fâșii fine de ardei gras proaspăt.</div>
-                        <div class="nutrition-info">Valori nutriționale: 1375.5 kcal | Proteine: 110.85g | Lipide: 22.3g | Glucide: 165.2g</div>
-                    </div>
-                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos, mozzarella, piept de pui, porumb, ardei gras.</div>
+                </div></div>
             </div>
 
-            <!-- Pizza 10 -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Pizza Rustica</span>
-                        <span class="item-weight">750g</span>
-                    </div>
+                    <div class="item-info-left"><span class="item-name">Pizza Rustica</span><span class="item-weight">750g</span></div>
                     <span class="item-price">36,50 RON</span>
                 </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Ingrediente:</div>
-                        <div class="item-ingredients">Blat cu tentă rustică, sos de roșii, mozzarella din belșug, cabanos crocant, salam nobil și topping generos de cartofi prăjiți.</div>
-                        <div class="nutrition-info">Valori nutriționale: 1420 kcal | Proteine: 77.8g | Lipide: 56.1g | Glucide: 175.6g</div>
-                    </div>
-                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos, mozzarella, cabanos, salam, kaizer, cartofi prăjiți.</div>
+                </div></div>
             </div>
 
-            <!-- Pizza 11 -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Pizza Quattro Carni</span>
-                        <span class="item-weight">700g</span>
-                    </div>
+                    <div class="item-info-left"><span class="item-name">Pizza Quattro Carni</span><span class="item-weight">700g</span></div>
                     <span class="item-price">40,00 RON</span>
                 </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Ingrediente:</div>
-                        <div class="item-ingredients">Pentru iubitorii de carne: blat, sos, mozzarella, cabanos, salam fin uscat, șuncă presată praga și kaizer rumenit.</div>
-                        <div class="nutrition-info">Valori nutriționale: 1963.5 kcal | Proteine: 112.3g | Lipide: 115g | Glucide: 153.8g</div>
-                    </div>
-                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos, mozzarella, cabanos, salam, șuncă, kaizer.</div>
+                </div></div>
             </div>
 
-            <!-- Pizza 12 -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Pizza Napolitana</span>
-                        <span class="item-weight">700g</span>
-                    </div>
+                    <div class="item-info-left"><span class="item-name">Pizza Napolitana</span><span class="item-weight">700g</span></div>
                     <span class="item-price">42,00 RON</span>
                 </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Ingrediente:</div>
-                        <div class="item-ingredients">Blat perfect dospit, sos aromat, mozzarella, șuncă feliată, prosciutto crudo fin, ardei gras și măsline negre.</div>
-                        <div class="nutrition-info">Valori nutriționale: 1871.5 kcal | Proteine: 115.6g | Lipide: 70.1g | Glucide: 152.7g</div>
-                    </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos, mozzarella, șuncă, prosciutto crudo, ardei gras, măsline.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Pizza Quattro Gusti</span><span class="item-weight">750g</span></div>
+                    <span class="item-price">43,50 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos, mozzarella, ton, salam, ciuperci, șuncă.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Pizza Diavola</span><span class="item-weight">650g</span></div>
+                    <span class="item-price">34,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos roșii, mozzarella, salam picant, ardei iute.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Pizza Margherita</span><span class="item-weight">550g</span></div>
+                    <span class="item-price">28,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat clasic, sos de roșii, mozzarella fină, ulei de măsline.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Pizza Tonno e Cipolla</span><span class="item-weight">700g</span></div>
+                    <span class="item-price">37,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos roșii, mozzarella, bucăți de ton, ceapă roșie, lămâie.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Pizza Capricciosa</span><span class="item-weight">750g</span></div>
+                    <span class="item-price">36,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos, mozzarella, șuncă, ciuperci, măsline, ardei gras.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Pizza Prosciutto e Funghi</span><span class="item-weight">700g</span></div>
+                    <span class="item-price">34,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos de roșii, mozzarella, șuncă praga, ciuperci feliate.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Pizza Vegetariana</span><span class="item-weight">700g</span></div>
+                    <span class="item-price">34,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, sos, mozzarella, ciuperci, porumb, măsline, broccoli, ardei gras, roșii.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Pizza Carbonara</span><span class="item-weight">750g</span></div>
+                    <span class="item-price">37,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Blat, mozzarella, bacon afumat, parmezan, sos alb de smântână.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Focaccia simple / cu usturoi</span><span class="item-weight">250g</span></div>
+                    <span class="item-price">12,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Turtă de pizza coaptă pe vatră cu ulei de măsline, oregano sau usturoi aromat.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Focaccia cu parmezan</span><span class="item-weight">300g</span></div>
+                    <span class="item-price">16,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="ingredients-title">Ingrediente:</div><div class="item-ingredients">Turtă fină pe vatră acoperită generos cu parmezan maturat ras.</div>
+                </div></div>
+            </div>
+        </section>
+
+        <!-- CATEGORIA 2: PASTE SI MARE -->
+        <section class="category-section" id="paste">
+            <h2 class="category-title">Primo & Mare</h2>
+            <span class="category-subtitle">Paste tradiționale și fructe de mare</span>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Paste cu creveți</span><span class="item-weight">400g</span></div>
+                    <span class="item-price">59,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="item-ingredients">Paste, creveți suculenți, ulei extravirgin de măsline, sare, piper.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Paste alla Scoglio</span><span class="item-weight">400g</span></div>
+                    <span class="item-price">68,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="item-ingredients">Fructe de mare mixte, sos aromat de roșii, ierburi italiene, paste fine.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Paste Aglio, Olio e Peperoncino</span><span class="item-weight">200g</span></div>
+                    <span class="item-price">27,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="item-ingredients">Ulei de măsline, vin alb, roșii cherry, ardei iute, condimente.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Risotto cu fructe de mare</span><span class="item-weight">400g</span></div>
+                    <span class="item-price">59,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="item-ingredients">Orez cremos, calamar, creveți, scoici, ulei de măsline.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Fructe de mare pane</span><span class="item-weight">350g</span></div>
+                    <span class="item-price">75,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="item-ingredients">Mix fructe de mare, ou, făină, ulei, lămâie.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Calamar Pane cu cartofi rondele</span><span class="item-weight">400g</span></div>
+                    <span class="item-price">66,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper">
+                    <div class="item-ingredients">Inele de calamar fraged pane, cartofi rondele aurii.</div>
+                </div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">File somon la grătar cu orez</span><span class="item-weight">350g</span></div>
+                    <span class="item-price">75,00 RON</span>
                 </div>
             </div>
 
-            <!-- Pizza 13 -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">Pizza Quattro Gusti</span>
-                        <span class="item-weight">750g</span>
-                    </div>
-                    <span class="item-price">43,50 RON</span>
-                </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Ingrediente:</div>
-                        <div class="item-ingredients">Patru gusturi divine pe un singur blat: sos, mozzarella, bucăți de ton, salam premium, ciuperci de pădure și șuncă.</div>
-                        <div class="nutrition-info">Valori nutriționale: 1677 kcal | Proteine: 118.8g | Lipide: 85.5g | Glucide: 157.3g</div>
-                    </div>
+                    <div class="item-info-left"><span class="item-name">File șalău la grătar cu cartofi rondele</span><span class="item-weight">300g</span></div>
+                    <span class="item-price">63,00 RON</span>
                 </div>
             </div>
         </section>
 
-
-        <!-- SECTIUNEA 3: GRILL & MAIN COURSE -->
+        <!-- CATEGORIA 3: GRILL & PUI -->
         <section class="category-section" id="grill">
-            <h2 class="category-title">Grill & Secondi Piatti</h2>
-            <span class="category-subtitle">Fripturi suculente realizate de maeștrii noștri</span>
+            <h2 class="category-title">Grill & Pollame</h2>
+            <span class="category-subtitle">Preparate gustoase din pui și specialități la grătar</span>
 
-            <!-- Friptura 1 -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">File somon la grătar cu orez</span>
-                        <span class="item-weight">350g</span>
-                    </div>
-                    <span class="item-price">75,00 RON</span>
+                    <div class="item-info-left"><span class="item-name">Aripioare de pui crispy cu cartofi prăjiți</span><span class="item-weight">400g</span></div>
+                    <span class="item-price">34,00 RON</span>
                 </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Descriere preparat:</div>
-                        <div class="item-ingredients">File premium de somon proaspăt, rumenit fin pe grătarul încins pentru a păstra suculența, servit pe un pat de orez pufos bine asezonat.</div>
-                    </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper"><div class="item-ingredients">Aripioare pui pane crocante, cartofi prăjiți, sosul casei.</div></div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Piept de pui la grătar cu cartofi prăjiți</span><span class="item-weight">350g</span></div>
+                    <span class="item-price">33,00 RON</span>
                 </div>
             </div>
 
-            <!-- Friptura 2 -->
             <div class="menu-item" onclick="toggleItem(this)">
                 <div class="item-visible-header">
-                    <div class="item-info-left">
-                        <span class="item-name">File șalău la grătar cu cartofi rondele</span>
-                        <span class="item-weight">300g</span>
-                    </div>
-                    <span class="item-price">63,00 RON</span>
+                    <div class="item-info-left"><span class="item-name">Șnițel din piept de pui cu cartofi prăjiți</span><span class="item-weight">350g</span></div>
+                    <span class="item-price">34,00 RON</span>
                 </div>
-                <div class="item-details-expanded">
-                    <div class="expanded-content-wrapper">
-                        <div class="ingredients-title">Descriere preparat:</div>
-                        <div class="item-ingredients">File de șalău fraged preparat la grătar, acompaniat perfect de o porție generoasă de cartofi rondele crocanți la exterior.</div>
-                        <div class="nutrition-info">Valori nutriționale: 770 kcal | Proteine: 102.5g | Lipide: 35g | Glucide: 8g | Zaharuri: 2.1g</div>
-                    </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Pui la ceaun cu mămăliguță și mujdei</span><span class="item-weight">500g</span></div>
+                    <span class="item-price">39,00 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Pulpe de pui dezosate la grătar + cartofi</span><span class="item-weight">350g</span></div>
+                    <span class="item-price">33,00 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Ostropel de pui cu mămăliguță</span><span class="item-weight">450g</span></div>
+                    <span class="item-price">31,00 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Ficăței de pui la tigaie cu mămăliguță</span><span class="item-weight">400g</span></div>
+                    <span class="item-price">29,00 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Pui crispy cu cartofi prăjiți</span><span class="item-weight">350g</span></div>
+                    <span class="item-price">34,00 RON</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORIA 4: PORC SI VITA -->
+        <section class="category-section" id="porc">
+            <h2 class="category-title">Carne di Maiale e Manzo</h2>
+            <span class="category-subtitle">Specialități din porc și vită gătite tradițional</span>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Ceafă de porc la grătar cu cartofi prăjiți</span><span class="item-weight">350g</span></div>
+                    <span class="item-price">35,00 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Tigaie picantă de porc cu mămăliguță</span><span class="item-weight">400g</span></div>
+                    <span class="item-price">36,00 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Tochitură moldovenească cu mămăliguță</span><span class="item-weight">500g</span></div>
+                    <span class="item-price">39,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper"><div class="item-ingredients">Carne porc, afumătură, ou ochi, brânză rasă, mămăligă caldă.</div></div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Șnițel de porc cu cartofi prăjiți</span><span class="item-weight">350g</span></div>
+                    <span class="item-price">35,00 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Coaste de porc la cuptor cu cartofi rondele</span><span class="item-weight">550g</span></div>
+                    <span class="item-price">57,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper"><div class="item-ingredients">Coaste de porc marinate la cuptor, sos barbeque BBQ, cartofi.</div></div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Mici cu cartofi prăjiți și muștar (3 buc)</span><span class="item-weight">300g</span></div>
+                    <span class="item-price">26,00 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Pârjoale moldovenești cu piure (2 buc)</span><span class="item-weight">400g</span></div>
+                    <span class="item-price">29,00 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Friptură de porc la tavă cu piure</span><span class="item-weight">450g</span></div>
+                    <span class="item-price">34,00 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Tigaie de vită cu legume și orez</span><span class="item-weight">400g</span></div>
+                    <span class="item-price">54,00 RON</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORIA 5: GARNITURI SI SOSURI -->
+        <section class="category-section" id="garnituri">
+            <h2 class="category-title">Contorni & Salse</h2>
+            <span class="category-subtitle">Garnituri delicioase și sosuri făcute în casă</span>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Cartofi prăjiți / piure / țărănești</span><span class="item-weight">150g</span></div>
+                    <span class="item-price">9,00 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Cartofi rondele / wedges</span><span class="item-weight">150g</span></div>
+                    <span class="item-price">10,00 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Orez simplu / cu legume</span><span class="item-weight">150g</span></div>
+                    <span class="item-price">9,00 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Legume la grătar</span><span class="item-weight">150g</span></div>
+                    <span class="item-price">14,00 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Sos de usturoi Ramiro / Pizza dulce / iute</span><span class="item-weight">50g</span></div>
+                    <span class="item-price">4,50 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Mujdei de usturoi / Smântână / Ardei iute</span><span class="item-weight">50g</span></div>
+                    <span class="item-price">3,50 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Pâine (chiflă)</span><span class="item-weight">1 buc</span></div>
+                    <span class="item-price">2,00 RON</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORIA 6: SALATE -->
+        <section class="category-section" id="salate">
+            <h2 class="category-title">Insalate</h2>
+            <span class="category-subtitle">Salate proaspete și aperitive ușoare</span>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Salată Caesar cu pui</span><span class="item-weight">350g</span></div>
+                    <span class="item-price">29,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper"><div class="item-ingredients">Mix salată, piept de pui grătar, crutoane crocante, parmezan ras, sos dressing special.</div></div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Salată cu ton</span><span class="item-weight">350g</span></div>
+                    <span class="item-price">29,00 RON</span>
+                </div>
+                <div class="item-details-expanded"><div class="expanded-content-wrapper"><div class="item-ingredients">Salată verde, bucăți de ton premium, porumb boabe, ceapă roșie, măsline, lămâie.</div></div></div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Salată asortată / de varză / roșii</span><span class="item-weight">150g</span></div>
+                    <span class="item-price">8,00 RON</span>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="toggleItem(this)">
+                <div class="item-visible-header">
+                    <div class="item-info-left"><span class="item-name">Salată de gogonele / murături asortate</span><span class="item-weight">150g</span></div>
+                    <span class="item-price">9,00 RON</span>
                 </div>
             </div>
         </section>
@@ -670,8 +791,8 @@
     </div>
 
     <footer>
-        © 2026 Ristorante Nicolmit & Ramiro Suceava. All rights reserved.<br>
-        <span style="font-size: 13px; opacity: 0.6; font-family: 'Montserrat', sans-serif;">Design Premium optimizat pentru comenzi digitale rapide.</span>
+        © 2026 Complex Nicolmit & Catering Ramiro Suceava.<br>
+        <span style="font-size: 13px; opacity: 0.5; font-family: 'Montserrat', sans-serif;">Meniu digital premium actualizat. Buon Appetito!</span>
     </footer>
 
     <script>
@@ -686,7 +807,6 @@
             }
         }
 
-        // Script pentru managementul vizual al tab-urilor la click
         const tabs = document.querySelectorAll('.nav-tab');
         tabs.forEach(tab => {
             tab.addEventListener('click', function() {
